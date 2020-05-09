@@ -1,0 +1,37 @@
+#include<iostream>
+#include<stdio.h>
+using namespace std;
+void aver()
+{
+	cout << "平均数计算器" << "请输入多个数，中间用空格隔开" << endl;
+	float a[100];
+	float sum = 0;
+	char str;
+	int num = 0;
+	for (int i = 0; i < 100; i++)
+	{
+		cin>>a[i];
+		num++;
+		sum += a[i];
+		str = getchar();
+		if (str == '\n')
+			break;
+	}
+	float ave = sum /num;
+	
+	printf("答案是%.2f\n", ave);
+	int ag ;
+	cout << "再来一次请输入1" << endl;
+	cin >> ag;
+	if (ag == 1)
+	{
+		system("cls");
+		aver();
+	}
+}
+int main()
+{
+	aver();
+	system("pause");
+	return 0;
+}
